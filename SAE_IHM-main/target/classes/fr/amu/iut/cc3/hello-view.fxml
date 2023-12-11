@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.maps.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane style="-fx-background-color: ffed8" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.amu.iut.cc3.HelloController">
+
+<center>
+    <VBox style="-fx-background-color:ffead8 ">
+        <MapView fx:id="mapView" onMouseDragged="#recentrerLaCarte"/>
+        <padding>
+            <Insets topRightBottomLeft="25" />
+        </padding>
+    </VBox>
+</center>
+<right>
+    <VBox style="-fx-background-color:ffead8 ">
+        <TableView fx:id="Tableau" layoutX="14.0" layoutY="52.0" prefHeight="296.0" prefWidth="505.0" style="-fx-background-color: ffead8" >
+            <columns>
+                <TableColumn text="Nom" fx:id="nomColumn"/>
+                <TableColumn text="Date" fx:id="dateColumn"/>
+                <TableColumn text="Epicentre" fx:id="EpicentreColumn"/>
+            </columns>
+        </TableView>
+        <Pane prefHeight="200.0" prefWidth="200.0">
+            <Button fx:id="btnG" layoutX="200" layoutY="0" text="Plus de Graphs" onAction="#PlusDeGraph"/>
+            <Label layoutX="119.0" layoutY="100.0" prefHeight="32.0" prefWidth="89.0" text="Région :" />
+            <ChoiceBox fx:id="choix" accessibleText="région" layoutX="200.0" layoutY="100.0" prefHeight="35.0" prefWidth="130.0" />
+            <Label layoutX="119.0" layoutY="150.0" text="De:"/>
+            <ChoiceBox fx:id="choix2" accessibleText="Date dep" layoutX="200.0" layoutY="150.0" prefHeight="35.0" prefWidth="100.0" />
+            <Label layoutX="119.0" layoutY="200.0" text="A:"/>
+            <ChoiceBox fx:id="choix3" accessibleText="Date arr" layoutX="200.0" layoutY="200.0" prefHeight="35.0" prefWidth="100.0" />
+            <Button fx:id="btnR" layoutX="200" layoutY="260" text="Rechercher" onAction="#rechercherSeismes"/>
+
+        </Pane>
+        <padding>
+            <Insets topRightBottomLeft="25" />
+        </padding>
+    </VBox>
+</right>
+</BorderPane>

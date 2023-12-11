@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="842.0" prefWidth="1285.0" style="-fx-background-color: ffead8" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.amu.iut.cc3.ToileController">
+    <children>
+
+        <VBox layoutX="14.0" layoutY="535.0" prefHeight="287.0" prefWidth="1282.0">
+
+            <children>
+
+                <LineChart fx:id="lineChart" prefHeight="290.0" prefWidth="1282.0" style="-fx-opacity: #374C80;" title="Chronologie des séismes">
+
+                    <xAxis>
+
+                        <CategoryAxis label="temps en années  " side="BOTTOM" />
+
+                    </xAxis>
+
+                    <yAxis>
+
+                        <NumberAxis label="nombres de séismes" side="LEFT" />
+
+                    </yAxis>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+
+
+
+                </LineChart>
+
+            </children>
+
+        </VBox>
+
+        <HBox layoutX="3.0" layoutY="57.0" prefHeight="510.0" prefWidth="1282.0">
+
+            <children>
+
+                <BarChart fx:id="barChart" prefHeight="398.0" prefWidth="732.0" title="Région avec le plus de séisme">
+
+                    <xAxis>
+
+                        <CategoryAxis label="régions de france" prefWidth="625.0" side="BOTTOM" />
+
+                    </xAxis>
+
+                    <yAxis>
+
+                        <NumberAxis label="nombres de séimses" side="LEFT" />
+
+                    </yAxis>
+
+                </BarChart>
+
+                <PieChart fx:id="pieChart" prefHeight="383.0" prefWidth="603.0" title="La qualité épicentrale" />
+
+            </children>
+
+        </HBox>
+
+        <Pane layoutX="561.0" layoutY="7.0" prefHeight="50.0" prefWidth="164.0" style="-fx-border-radius: #FB335B;">
+
+            <children>
+
+                <Label layoutX="11.0" layoutY="2.0" prefHeight="46.0" prefWidth="151.0" style="-fx-background-radius: #FB335B; -fx-background-radius: 50px;" text="DASHBOARD" textAlignment="CENTER" textFill="#e8855b">
+
+                    <font>
+
+                        <Font name="Arial Black" size="20.0" />
+
+                    </font>
+
+                    <effect>
+
+                        <ColorAdjust brightness="0.35" contrast="0.31" />
+
+                    </effect>
+
+                </Label>
+
+            </children>
+
+        </Pane>
+      <Button fx:id="retour" layoutY="2.0" mnemonicParsing="false" text="Retour" alignment="BOTTOM_LEFT" onAction="#RetourCarte" />
+
+    </children>
+
+</AnchorPane>
